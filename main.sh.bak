@@ -1,0 +1,35 @@
+#!/bin/bash
+
+gridSize=4
+stepValue=3
+e=0.1
+filter=0.9995
+
+g++ -fopenmp -o main ptsa/*.cpp editor/*.cpp shouji/*.cpp main.cpp
+chmod u+x main
+
+for readLength in `ls dataset|grep .txt|sed 's/.txt//g'|sort -g`;
+do
+	if [ "$readLength" -ne 10000 ]; then
+		continue
+	fi
+
+	inputFilename=`pwd`/dataset/${readLength}.txt
+	outputFilename=`pwd`/result/result_${readLength}.txt
+	echo $inputFilename
+	echo $outputFilename
+
+	#nohup ./main $e $inputFilename > ${outputFilename}_1 &
+	# echo -e '\n\n\n' >> $outputFilename
+
+	#nohup ./main $gridSize $e $inputFilename > ${outputFilename}_2 &
+	# echo -e '\n\n\n' >> $outputFilename
+
+	echo > $outputFilename
+
+	for threadCount in 96;
+	do
+		./main $gridSize $stepValue $e $filter $threadCount $inputFilename >> $outputFilename
+		echo -e '\n\n\n' >> $outputFilename
+	done
+done
