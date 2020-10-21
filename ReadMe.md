@@ -11,17 +11,3 @@ This algorithm is applied to the filtering scenario. The experimental results sh
 complexity, this algorithm can greatly reduce the computing time, and the maximum speedup ratio of 64 threads can
 reach 63X, while maintaining high comparison accuracy, higher filtering accuracy and lower filtering false positive
 rate, and this algorithm performs better for long texts with high similarity
-编译命令：make
-清理命令：make clean
-
-运行editor：
-./main $e $datasetFile
-例如：./main 0.1 ./dataset/10000.txt
-
-运行shouji：
-./main $gridSize $e $datasetFile
-例如：./main 4 0.1 ./dataset/10000.txt
-
-运行ptsa：
-./main $gridSize $stepValue $e $filter $threadCount $datasetFile
-例如：./main 4 3 0.1 0.9995 16 ./dataset/10000.txt
