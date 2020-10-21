@@ -1,3 +1,4 @@
+https://github.com/fahaihi/PTSA/blob/master/ptsa.PNG
 Text similarity calculation has a wide range of applications of text editing, personalized recommendation,
 biological information processing and other fields. There are many limitations on text similarity algorithms through
 dynamic programming or hardware acceleration. This paper designs and implements a parallel algorithm of text
