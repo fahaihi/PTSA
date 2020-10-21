@@ -1,4 +1,8 @@
-https://github.com/fahaihi/PTSA/blob/master/ptsa.PNG
+![](https://github.com/fahaihi/PTSA/blob/master/ptsa.PNG)
+
+# **A parallel algorithm for computing text similarity with low time and storage overhead**
+
+
 Text similarity calculation has a wide range of applications of text editing, personalized recommendation,
 biological information processing and other fields. There are many limitations on text similarity algorithms through
 dynamic programming or hardware acceleration. This paper designs and implements a parallel algorithm of text
@@ -12,3 +16,5 @@ This algorithm is applied to the filtering scenario. The experimental results sh
 complexity, this algorithm can greatly reduce the computing time, and the maximum speedup ratio of 64 threads can
 reach 63X, while maintaining high comparison accuracy, higher filtering accuracy and lower filtering false positive
 rate, and this algorithm performs better for long texts with high similarity
+
+**more info： https://github.com/fahaihi/PTSA/wiki/USer-Guide**
